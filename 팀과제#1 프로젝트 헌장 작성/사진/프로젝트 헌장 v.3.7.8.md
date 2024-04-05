@@ -15,19 +15,15 @@
 # 작업분할도(WBS)
 ![작업분할도.png](./image/작업분할도.png)
 # 작업 의존 관계 파악
-
-||||
-| :- | :- | :- |
+![작업의존관계.png](./image/작업의존관계.png)
 # CPM
-
+![CPM.png](./image/CPM.png)
 # 간트차트
-
-
-
-GFP
-
-PCA
-
+![간트차트.png](./image/간트차트.png)
+# GFP
+![GFP.png](./image/GFP.png)
+# PCA
+![PCA.png](./image/처리복잡도.png)
 PCA = 0.65 = 0.01(처리복잡도 총합 = 39) = 1.04
 
 FP = GFP x PCA = 627 \* 1.04 = 652.08
