@@ -24,6 +24,9 @@
 ![GFP.png](./image/GFP.png)
 # PCA
 ![PCA.png](./image/처리복잡도.png)
+
+# MM 계산
+
 PCA = 0.65 = 0.01(처리복잡도 총합 = 39) = 1.04
 
 FP = GFP x PCA = 627 \* 1.04 = 652.08
