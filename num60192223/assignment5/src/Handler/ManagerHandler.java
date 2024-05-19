@@ -6,6 +6,8 @@ public class ManagerHandler extends ReportHandler {
     }
     @Override
     public void handleReport(User user) {
-       
+        if (user.getReportCount() >= limit) {
+            user.suspend();
+        }
     }
 }

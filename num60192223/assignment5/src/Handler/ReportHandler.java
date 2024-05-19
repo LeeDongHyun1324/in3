@@ -10,7 +10,7 @@ public abstract class ReportHandler {
 
     //다음 처리자 설정
     public void setNextHandler(ReportHandler nextHandler) {
-        
+        this.nextHandler = nextHandler;
     }
     
     //신고 처리를 위한 추상 메서드

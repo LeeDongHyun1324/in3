@@ -11,11 +11,11 @@ public class DeletePostCommand implements Command {
 
     @Override
     public void execute() {
-        
+        bulletinBoard.removePost(post);
     }
 
     @Override
     public void undo() {
-        
+        bulletinBoard.addPost(post);
     }
 }

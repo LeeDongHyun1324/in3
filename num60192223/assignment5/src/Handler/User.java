@@ -14,7 +14,8 @@ public class User {
     }
 
     public void warn() {
-        
+        warningCount++;
+        System.out.println("신고 횟수 : " + warningCount);
     }
 
     public String getName() {
@@ -34,6 +35,6 @@ public class User {
     }
     //사용자 정지 메서드
     public void suspend() {
-        
+        System.out.println(name + "는 정지당한 계정입니다.");
     }
 }

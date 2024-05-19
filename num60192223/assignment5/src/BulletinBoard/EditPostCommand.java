@@ -13,11 +13,11 @@ public class EditPostCommand implements Command {
 
     @Override
     public void execute() {
-        
+        bulletinBoard.updatePost(oldPost, newPost);
     }
 
     @Override
     public void undo() {
-        
+        bulletinBoard.updatePost(newPost, oldPost);
     }
 }

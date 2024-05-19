@@ -28,17 +28,18 @@ public class Post {
     }
 
     public void setState(State state) {
-        
+        this.state = state;
+        state.handle(this);
     }
 
     public void applyState() {
-        
+        state.handle(this);
     }
     public void executeCommand(Command command) {
-        
+        state.executeCommand(command);
     }
     public void undoState() {
-        
+        state.undo(this);
     }
     //getter와 setter
     public String getContent() {
@@ -115,5 +116,3 @@ public class Post {
         this.editHistory.add(edit);
     }
 }
-
-    
