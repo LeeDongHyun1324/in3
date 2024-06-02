@@ -46,6 +46,7 @@ public class User {
         private String userPassword;
         private String email;
         private String userName;
+        private UserBuilder toString;
 
         // password 필수 입력값
         public UserBuilder(String userPassword) {
@@ -68,7 +69,7 @@ public class User {
         }
 
         public User build() {
-            return new User(this);
+            return new User(this.toString);
         }
     }
 
