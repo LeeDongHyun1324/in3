@@ -19,50 +19,40 @@ public class CreatePostCommandTest {
 
     @Test
     public void testExecute() {
-        // Act
         command.execute();
 
-        // Assert
         assertEquals(1, bulletinBoard.getPosts().size());
     }
 
     @Test
     public void testUndo() {
-        // Arrange
         command.execute();
 
-        // Act
         command.undo();
 
-        // Assert
         assertEquals(0, bulletinBoard.getPosts().size());
     }
 
     @Test
     public void testUndoAfterExecute() {
-        // Act
         command.execute();
         command.undo();
-
-        // Assert
+        
         assertEquals(0, bulletinBoard.getPosts().size());
     }
 
     @Test
     public void testUndoWithoutExecute() {
-        // Act & Assert
         assertThrows(Exception.class, () -> command.undo());
     }
 
     @Test
     public void testUndoMultipleTimes() {
-        // Arrange
         command.execute();
         command.undo();
         command.execute();
         command.undo();
 
-        // Assert
         assertEquals(0, bulletinBoard.getPosts().size());
     }
 }

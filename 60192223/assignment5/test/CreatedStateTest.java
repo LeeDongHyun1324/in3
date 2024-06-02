@@ -28,57 +28,44 @@ class CreatedStateTest {
 
     @Test
     public void testHandle() {
-        // Act
         state.handle(post);
 
-        // Assert
         assertTrue(post.isVisible());
         assertNotNull(post.getCreatedTime());
     }
 
     @Test
     public void testSendCreationNotification() {
-        // Arrange
         String content = "New Content";
 
-        // Act
         post.setContent(content);
         state.sendCreationNotification(post);
 
-        // Assert
         assertEquals("새로운 게시물이 작성되었습니다 : New Content", systemOut());
     }
 
     @Test
     public void testSetAuthorInfo() {
-        // Arrange
         User author = new User("John");
 
-        // Act
         state.setAuthorInfo(post, author);
 
-        // Assert
         assertEquals(author, post.getAuthor());
     }
 
     @Test
     public void testSetInitialTags() {
-        // Arrange
         String[] tags = {"tag1", "tag2"};
 
-        // Act
         state.setInitialTags(post, tags);
 
-        // Assert
         assertArrayEquals(tags, post.getTags());
     }
 
     @Test
     public void testExecuteCommand() {
-        // Arrange
         Command command = new CreatePostCommand(new BulletinBoard(), post);
 
-        // Act & Assert
         assertDoesNotThrow(() -> state.executeCommand(command));
     }
 
